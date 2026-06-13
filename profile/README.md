@@ -18,7 +18,7 @@
 
 ## Focus
 
-X-One AI builds open-source tools for the engineering layer between AI agents and real developer systems.
+X-One builds Safe Agent Operations tools for teams adopting AI agents and MCP tools in developer workflows.
 
 We care about:
 
@@ -29,16 +29,31 @@ We care about:
 - agent-generated PR evidence
 - debuggable and auditable agent workflows
 
-## Product Matrix
+## Released Tools
 
 | Project | Role | Maturity |
 |---|---|---|
 | [mcp-audit](https://github.com/X-One-AI/mcp-audit) | Scan MCP and agent configs for risky permissions, secrets, unsafe commands, CI safety gaps, baselines, exceptions, and team policy gates. | Stable production track |
-| [agent-pr-evidence](https://github.com/X-One-AI/agent-pr-evidence) | Generate reviewable safety and delivery evidence for AI-agent-generated pull requests. | Early production |
-| [agent-failure-packet](https://github.com/X-One-AI/agent-failure-packet) | Create redacted, shareable debug packets from failed AI agent runs. | Early production |
-| [mcp-risk-index](https://github.com/X-One-AI/mcp-risk-index) | Maintain an evidence-backed risk index for common MCP servers and permissions. | Early production |
-| [ai-incident-lab](https://github.com/X-One-AI/ai-incident-lab) | Provide runnable incident simulations for AI agents, MCP tools, and agent-generated code. | Early production |
+| [agent-pr-evidence](https://github.com/X-One-AI/agent-pr-evidence) | Generate reviewable safety and delivery evidence for AI-agent-generated pull requests. | Released |
+| [agent-failure-packet](https://github.com/X-One-AI/agent-failure-packet) | Create redacted, shareable debug packets from failed AI agent runs. | Released |
+
+## Data And Lab Assets
+
+| Project | Role | Maturity |
+|---|---|---|
+| [mcp-risk-index](https://github.com/X-One-AI/mcp-risk-index) | Maintain an evidence-backed risk index for common MCP servers and permissions. | Released |
+| [ai-incident-lab](https://github.com/X-One-AI/ai-incident-lab) | Provide runnable incident simulations for AI agents, MCP tools, and agent-generated code. | Released |
 | [homebrew-tap](https://github.com/X-One-AI/homebrew-tap) | Homebrew distribution channel for X-One CLI tools. | Distribution infrastructure |
+
+## Decision Repositories
+
+| Project | Role | Decision Rule |
+|---|---|---|
+| [ai-prod-check](https://github.com/X-One-AI/ai-prod-check) | Decision repository for production-check ideas. | Absorb, write up, watch, or reject. |
+| [agent-trace](https://github.com/X-One-AI/agent-trace) | Decision repository for tracing-platform ideas. | Move useful evidence ideas into `agent-failure-packet`, watch, or reject. |
+| [oss-doctor](https://github.com/X-One-AI/oss-doctor) | Decision repository for generic repo-health ideas. | Feed evidence-backed facts into `mcp-risk-index`, watch, or reject. |
+
+Portfolio governance and maturity gates are tracked in [Portfolio Health](../docs/portfolio-health.md).
 
 ## Install
 
@@ -48,7 +63,7 @@ brew tap X-One-AI/tap
 brew install mcp-audit
 ```
 
-Other project packages are prepared for release through GitHub Actions, PyPI/TestPyPI Trusted Publishing, GitHub Releases, and Homebrew formulae.
+Other released project packages are available through PyPI, TestPyPI, GitHub Releases, and Homebrew formulae.
 
 ## Engineering Principles
 
