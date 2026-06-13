@@ -18,7 +18,7 @@
 
 ## 方向
 
-X-One AI 构建的是 AI agents 与真实开发系统之间那一层工程工具。
+X-One 构建面向 Safe Agent Operations 的工具，帮助团队在开发工作流中更安全地采用 AI agents 和 MCP tools。
 
 我们关注：
 
@@ -29,16 +29,31 @@ X-One AI 构建的是 AI agents 与真实开发系统之间那一层工程工具
 - agent-generated PR evidence
 - 可调试、可审计的 agent 工作流
 
-## 项目矩阵
+## 已发布工具
 
 | 项目 | 作用 | 成熟度 |
 |---|---|---|
 | [mcp-audit](https://github.com/X-One-AI/mcp-audit) | 扫描 MCP 与 agent 配置中的高风险权限、secret、不安全命令、CI 安全缺口、baseline、exception 和团队 policy gate。 | Stable production track |
-| [agent-pr-evidence](https://github.com/X-One-AI/agent-pr-evidence) | 为 AI agent 生成的 PR 生成可审查的安全与交付证据。 | Early production |
-| [agent-failure-packet](https://github.com/X-One-AI/agent-failure-packet) | 为失败 agent run 生成脱敏、可共享的调试包。 | Early production |
-| [mcp-risk-index](https://github.com/X-One-AI/mcp-risk-index) | 维护有证据支撑的常见 MCP server 与权限风险索引。 | Early production |
-| [ai-incident-lab](https://github.com/X-One-AI/ai-incident-lab) | 提供 AI agents、MCP tools 和 agent-generated code 的事故模拟案例。 | Early production |
+| [agent-pr-evidence](https://github.com/X-One-AI/agent-pr-evidence) | 为 AI agent 生成的 PR 生成可审查的安全与交付证据。 | 已发布 |
+| [agent-failure-packet](https://github.com/X-One-AI/agent-failure-packet) | 为失败 agent run 生成脱敏、可共享的调试包。 | 已发布 |
+
+## 数据与演练资产
+
+| 项目 | 作用 | 成熟度 |
+|---|---|---|
+| [mcp-risk-index](https://github.com/X-One-AI/mcp-risk-index) | 维护有证据支撑的常见 MCP server 与权限风险索引。 | 已发布 |
+| [ai-incident-lab](https://github.com/X-One-AI/ai-incident-lab) | 提供 AI agents、MCP tools 和 agent-generated code 的事故模拟案例。 | 已发布 |
 | [homebrew-tap](https://github.com/X-One-AI/homebrew-tap) | X-One CLI 工具的 Homebrew 分发渠道。 | Distribution infrastructure |
+
+## 决策仓库
+
+| 项目 | 作用 | 决策规则 |
+|---|---|---|
+| [ai-prod-check](https://github.com/X-One-AI/ai-prod-check) | 生产检查想法的决策仓库。 | 吸收、写成文章、观察或拒绝。 |
+| [agent-trace](https://github.com/X-One-AI/agent-trace) | tracing platform 想法的决策仓库。 | 有价值的证据想法进入 `agent-failure-packet`，否则观察或拒绝。 |
+| [oss-doctor](https://github.com/X-One-AI/oss-doctor) | 通用 repo-health 想法的决策仓库。 | 有证据支撑的事实进入 `mcp-risk-index`，否则观察或拒绝。 |
+
+组合治理和成熟度门槛记录在 [Portfolio Health](../docs/portfolio-health.md)。
 
 ## 安装
 
@@ -48,7 +63,7 @@ brew tap X-One-AI/tap
 brew install mcp-audit
 ```
 
-其它项目包已准备通过 GitHub Actions、PyPI/TestPyPI Trusted Publishing、GitHub Releases 和 Homebrew formulae 发布。
+其它已发布项目包可通过 PyPI、TestPyPI、GitHub Releases 和 Homebrew formulae 安装。
 
 ## 工程原则
 
