@@ -29,21 +29,34 @@ We care about:
 - agent-generated PR evidence
 - debuggable and auditable agent workflows
 
-## Projects
+## Product Matrix
 
-| Priority | Project | Role |
+| Project | Role | Maturity |
 |---|---|---|
-| P0 | [mcp-audit](https://github.com/X-One-AI/mcp-audit) | Scan MCP and agent configs for risky permissions, secrets, unsafe commands, and CI safety gaps. |
-| P1 | [agent-pr-evidence](https://github.com/X-One-AI/agent-pr-evidence) | Generate reviewable safety evidence for AI-agent-generated pull requests. |
-| P1 | [agent-failure-packet](https://github.com/X-One-AI/agent-failure-packet) | Create redacted, shareable debug packets from failed AI agent runs. |
-| P2 | [mcp-risk-index](https://github.com/X-One-AI/mcp-risk-index) | Maintain an open risk index for common MCP servers and permissions. |
-| P2 | [ai-incident-lab](https://github.com/X-One-AI/ai-incident-lab) | Provide runnable incident simulations for AI agents, MCP tools, and agent-generated code. |
+| [mcp-audit](https://github.com/X-One-AI/mcp-audit) | Scan MCP and agent configs for risky permissions, secrets, unsafe commands, CI safety gaps, baselines, exceptions, and team policy gates. | Stable production track |
+| [agent-pr-evidence](https://github.com/X-One-AI/agent-pr-evidence) | Generate reviewable safety and delivery evidence for AI-agent-generated pull requests. | Early production |
+| [agent-failure-packet](https://github.com/X-One-AI/agent-failure-packet) | Create redacted, shareable debug packets from failed AI agent runs. | Early production |
+| [mcp-risk-index](https://github.com/X-One-AI/mcp-risk-index) | Maintain an evidence-backed risk index for common MCP servers and permissions. | Early production |
+| [ai-incident-lab](https://github.com/X-One-AI/ai-incident-lab) | Provide runnable incident simulations for AI agents, MCP tools, and agent-generated code. | Early production |
+| [homebrew-tap](https://github.com/X-One-AI/homebrew-tap) | Homebrew distribution channel for X-One CLI tools. | Distribution infrastructure |
 
-## Current execution rule
+## Install
 
-Only **mcp-audit** is active initially.
+```bash
+python3 -m pip install xone-mcp-audit
+brew tap X-One-AI/tap
+brew install mcp-audit
+```
 
-Other repositories are reserved directions that preserve product decisions and prevent scope creep. They become active only when real user feedback points to the next adjacent problem.
+Other project packages are prepared for release through GitHub Actions, PyPI/TestPyPI Trusted Publishing, GitHub Releases, and Homebrew formulae.
+
+## Engineering Principles
+
+- Production usable, not demo usable.
+- Local-first and reviewable before hosted automation.
+- Evidence over vague safety claims.
+- Team policy, baselines, exceptions, and release artifacts should be versioned.
+- Each project references the shared One Person Team operating model while keeping project-specific constraints and skills.
 
 ## For builders and teams
 
