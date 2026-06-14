@@ -60,7 +60,7 @@ Portfolio governance and maturity gates are tracked in [Portfolio Health](../doc
 ```bash
 python3 -m pip install xone-mcp-audit
 brew tap X-One-AI/tap
-brew install mcp-audit
+brew install x-one-ai/tap/mcp-audit
 ```
 
 Other released project packages are available through PyPI, TestPyPI, GitHub Releases, and Homebrew formulae.
