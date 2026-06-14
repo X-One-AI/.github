@@ -60,7 +60,7 @@ X-One 构建面向 Safe Agent Operations 的工具，帮助团队在开发工作
 ```bash
 python3 -m pip install xone-mcp-audit
 brew tap X-One-AI/tap
-brew install mcp-audit
+brew install x-one-ai/tap/mcp-audit
 ```
 
 其它已发布项目包可通过 PyPI、TestPyPI、GitHub Releases 和 Homebrew formulae 安装。
